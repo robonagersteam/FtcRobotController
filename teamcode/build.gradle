@@ -1,5 +1,5 @@
 //
-// build.gradle in TeamCode
+// build.gradle in teamcode
 //
 // Most of the definitions for building your module reside in a common, shared
 // file 'build.common.gradle'. Being factored in this way makes it easier to
@@ -14,6 +14,7 @@
 // Include common definitions from above.
 apply from: '../build.common.gradle'
 apply from: '../build.dependencies.gradle'
+apply plugin: 'com.android.application'
 
 android {
     namespace = 'org.firstinspires.ftc.teamcode'
@@ -25,4 +26,10 @@ android {
 
 dependencies {
     implementation project(':FtcRobotController')
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'androidx.activity:activity:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
 }
